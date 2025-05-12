@@ -3,11 +3,9 @@
 #include <iostream>
 
 extern "C" int multiply(int a, int b) {
+  long int result;
   std::cout << "c++: Multiplying " << a << " and " << b << std::endl;
-  return a * b;
+  result = a * b;
+  std::cout << a << "*" << b << "=" << result << std::endl;
+  return result;
 }
-
-//extern "c" int add(int a, int b) {
-//  std::cout << "c++: adding " << a << " and " << b << std::endl;
-//  return a + b;
-//}
