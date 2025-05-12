@@ -2,7 +2,15 @@
 #include "svdpi.h"
 #include <iostream>
 
-extern "C" int add(int a, int b) {
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+int add(int a, int b) {
   std::cout << "C++: Adding " << a << " and " << b << std::endl;
   return a + b;
 }
+  
+#ifdef __cplusplus
+}
+#endif

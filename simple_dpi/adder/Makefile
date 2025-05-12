@@ -34,8 +34,8 @@ endif
 
 default:
 	@echo "-- VERILATE & BUILD --------"
-	$(VERILATOR) -cc adder.sv --exe adder_dpi.cc -CFLAGS "-std=c++17" -o adder
-	@echo $(VERILATOR) --binary -j 0 adder.sv adder_dpi.cc
+	@echo $(VERILATOR) -cc adder.sv --exe adder_dpi.cc -CFLAGS "-std=c++17" -o adder
+	$(VERILATOR) --binary -j 0 adder.sv adder_dpi.cc
 	@echo "-- RUN ---------------------"
 	obj_dir/Vadder
 	@echo "-- DONE --------------------"
