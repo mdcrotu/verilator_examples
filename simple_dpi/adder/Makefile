@@ -45,4 +45,11 @@ default:
 ######################################################################
 
 clean:
-	-rm -rf obj_dir *.log *.dmp *.vpd core
+	-rm -rf obj_dir *.log *.dmp *.vpd core *.so
+
+adder.so:
+	g++ adder_dpi.cc -std=c++17 -g -o adder.so -shared -fPIC -I$(DVT_HOME)/predefined_projects/libs/IEEE_1800-2012/include/
+		
+		
+
+	

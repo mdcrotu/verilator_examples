@@ -2,4 +2,10 @@ obj_dir/
 work/
 transcript
 dvt_build.log
+dvt_run_all.log
 .dvt/
+dvt.data/
+.cproject
+.project
+.settings/
+*.so
